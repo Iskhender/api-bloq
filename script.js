@@ -58,8 +58,11 @@ async function getmelumatlarigetir() {
         }
     }
     catch (xeta) {
-        console.log(`serverde xeta yarandi:${xeta}`)
-    }
+        console.log(`Xəta baş verib: ${xeta}`)
+        setTimeout(function () {
+            document.querySelector(`Xəta baş verdi. Səyfəni yeniləməyiniz xahiş olunur.`).innerText = xeta
+        },5000)
+
 }
 
 
@@ -68,3 +71,4 @@ function addFavouriteList(element) {
     element.classList.toggle("fa-solid")
     
     }
+}
